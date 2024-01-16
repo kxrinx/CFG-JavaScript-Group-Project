@@ -1,15 +1,14 @@
 body {
     background-color:#f3dae1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma;
-    }
+
+  h1, h2 {
+    text-align: center;
+  }
   .sidebar {
     top: 60px;
-    margin: 0;
-    margin-top: 20px;
+    margin-top: -60px;
     padding:0;
     width: 200px;
     background-color: #E7B5C2;
@@ -40,26 +39,22 @@ body {
   }
   div.content {
     margin-left: 200px;
-    padding: 20px 36px;
-    height: 1000px;
+    padding: 20px;
+    text-align: center;
   }
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
   .named-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
-  
-  #button {
+
+  p .tips {
+    text-align: center;
+  }
+
+  button {
+    display: inline;
+    text-align: center;
     align-items: center;
     justify-content: center;
     padding: 30px;
@@ -67,18 +62,33 @@ body {
     border-radius: 50px;
     border: none;
   }
-  
-  .random-button {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 20px;
-    text-align: center;
-    max-width: 600px;
+
+  button:hover {
+    background-color: #E7B5C2;
+    cursor: pointer;
+    border: 1px solid #CE6A85;
+    color: white;
+    text-decoration: double;
   }
-  
+
   button {
     text-align: center;
   }
+
+  p {
+    line-height: 1.5;
+  }
+
+  #tips {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  input {
+    display: inline;
+  }
+
+
   /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
   @media screen and (max-width: 400px) {
     .sidebar a {
@@ -86,16 +96,43 @@ body {
       float: none;
     }
   }
+
+
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+
   .footer {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
     position: fixed;
     bottom:0;
     left:0;
     width:100%;
     height: 50px;
     background-color: #CE6A85;
-     }
+  }
+
+  .email {
+    color: white;
+    padding-bottom: 5px;
+  }
   a{
      color: white;
+  }
+
+  img {
+    max-width: 200px;
+    margin-top: 400px;
   }
   .footer-text-left {
     font-size:15px;
@@ -105,5 +142,4 @@ body {
   }
   a.menu:hover {
     font-weight:bold;
-    font-size:20px;
   }

@@ -1,3 +1,4 @@
+
 function aboutUsText() {
     document.getElementById("paragraph1").innerHTML="This is new text";
     }
@@ -6,13 +7,38 @@ function aboutUsText() {
     }
     
     function WorkLifeBalance() {
-     let x = document.getElementById("myDIV");
+      let x = document.getElementById("workLifeTips")
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
         x.style.display = "none";
       }
     }
+
+    function selfCare() {
+     let x = document.getElementById("selfCareTips")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function sleepTips() {
+     let x = document.getElementById("sleepTips")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function anxietyTips() {
+     let x = document.getElementById("anxietyTips")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+     }
     
     const tips = [
         'Reframe unhelpful thoughts',
@@ -27,13 +53,8 @@ function aboutUsText() {
     
     const rdmbtn = document.getElementById("rdmbtn");
     const tipsElement = document.getElementById("tips");
-    
     rdmbtn.addEventListener("click", generateRandomTip);
-    
     function generateRandomTip() {
-      
     const randomIndex = Math.floor(Math.random() * tips.length);
-      
     tipsElement.textContent = tips[randomIndex];
     }
-    
