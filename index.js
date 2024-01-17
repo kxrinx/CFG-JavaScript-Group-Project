@@ -7,37 +7,26 @@ function aboutUsText() {
     }
     
     function WorkLifeBalance() {
-      let x = document.getElementById("workLifeTips")
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+      const x = document.querySelector(".workLifeTips")
+      console.log("x ===", x);
+      x.classList.toggle("hide-text");
     }
 
     function selfCare() {
-     let x = document.getElementById("selfCareTips")
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+     const x = document.querySelector(".selfCareTips")
+     console.log("x ===", x);
+     x.classList.toggle("hide-text");
     }
+
     function sleepTips() {
-     let x = document.getElementById("sleepTips")
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+      const x = document.querySelector(".sleepTips")
+      console.log("x ===", x);
+      x.classList.toggle("hide-text");
     }
     function anxietyTips() {
-     let x = document.getElementById("anxietyTips")
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+      const x = document.querySelector(".anxietyTips")
+      console.log("x ===", x);
+      x.classList.toggle("hide-text");
      }
     
     const tips = [
