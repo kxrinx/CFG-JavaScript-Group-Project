@@ -28,6 +28,28 @@ function aboutUsText() {
       console.log("x ===", x);
       x.classList.toggle("hide-text");
      }
+
+
+
+     function confirmSignup(event) {
+      event.preventDefault;
+      let emailInput = document.querySelector("#email");
+      if (emailInput.value === "") {
+        alert ("Please enter your email address to sign up!")
+      } else {
+        alert ("Thank you for signing up!")
+      }
+     }
+
+     function alertSearching(event) {
+      event.preventDefault;
+      let searchInput = document.querySelector("#query");
+      if (searchInput.value === "") {
+        alert ("Oops! I think you forgot to enter a topic to search for!")
+      } else {
+        alert (`Searching for ${searchInput.value}`);
+     }
+    }
     
     const tips = [
         'Reframe unhelpful thoughts',
@@ -47,3 +69,9 @@ function aboutUsText() {
     const randomIndex = Math.floor(Math.random() * tips.length);
     tipsElement.textContent = tips[randomIndex];
     }
+
+    let emailSignupElement = document.querySelector("#emailSignup");
+    emailSignupElement.addEventListener("submit", confirmSignup);
+
+    let searchElement = document.querySelector("#form");
+    searchElement.addEventListener("submit", alertSearching);
